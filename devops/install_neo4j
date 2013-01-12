@@ -1,0 +1,38 @@
+INSTALL NEO4J
+
+1. Install Java.  I tried OpenJDK 1.6 and 1.7, but it always complains that it wants Java 6 (which should be OpenJDK 1.6).
+   It just never seems to be happy.  So...
+
+	$ sudo yum install java-1.6.0-openjdk java-1.6.0-openjdk-devel
+
+2. Stick the following BASH commands in a scripting file and run it
+
+	RAWNEWVERSION=`curl -d "action=ask&query=[[Neo4j]]|%3FStable&format=json" http://www.geilthings.com/api.php` 
+	NEWVERSION=`echo "$RAWNEWVERSION" | grep -Po '^.*?\K(?<=Stable\":\[\").*?(?=\")'`  
+	echo $NEWVERSION
+	 
+	cd /opt
+	wget http://dist.neo4j.org/neo4j-community-${NEWVERSION}-unix.tar.gz
+	tar zxvf neo4j-community-${NEWVERSION}-unix.tar.gz
+	cd /opt/neo4j-community-${NEWVERSION}
+	bin/neo4j install
+	ln -s /opt/neo4j-community-${NEWVERSION} /opt/neo4j
+
+3. Adjust max open files.  I used max for neo4j of 40,000 soft, 50,000 hard; max for the system 100,000
+
+	$ sudo sysctl -w fs.file-max=100000
+
+	$ sudo vi /etc/sysctl.conf
+
+		fs.file-max = 100000
+
+	$ sudo vi /etc/security/limits.conf
+
+		neo4j soft nofile 40000
+		neo4j hard nofile 50000
+
+4. Start neo4j
+
+	$ sudo mv /etc/init.d/neo4j-service /etc/init.d/neo4j
+	$ sudo service neo4j start
+	$ sudo chkconfig neo4j on

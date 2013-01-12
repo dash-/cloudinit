@@ -1,0 +1,333 @@
+
+The Cloud Initiative
+
+
+Mission: Globally change the way web software is organized, designed, implemented, published, and maintained.
+         Put another way: Systematically end evil web empires by fostering a positive, open, competitive web ecosystem.
+
+Motto: Create more than you capture. - Tim O'Reilly
+
+
+How the Cloud Initiative fulfills its mission:
+
+* Provides guidance on what systems should exist
+* Provides a mechanism for defining standard versioned system interfaces
+* Provides documentation for the implementation of standard versioned system interfaces
+* Ensures the existence of a commons for publishing system implementations
+* Protects technology from patent-hungry corporations
+* Provides guild system for talent-seeking organizations
+* Manages universal systems
+* Provides highly-networked hosting to service providers to optimize provider-to-provider (Pv2Pv) connectivity
+* Enforces service-provider requirements
+
+
+Universal Services:
+
+* People
+	- Register People to a specific People Service Provider (PplSPv)
+	- Register move of People from one PplSPv to another
+	- Register removal of People from a specific PplSPv
+	- Publish People meta-database to Master PplSPv's
+
+* Universal Controls (maybe)
+	- Provide javascript to participating Service Providers for Universal Controls to be displayed in their web application
+	- Standard but styleable minimized control panel that allows user to:
+		- See what user is logged in
+		- Log out
+		- Act on behalf of:
+			- Myself
+			- An organization
+				- This would require authorization to act on behalf of an organization
+		- User preferences
+	- This control panel would only call appropriate webservices hosted by user's PplSPv or OrgSPv, as applicable
+	- Service providers would systematically be forced to respect user's choices
+
+* UniGuild
+	- Based on an abstract base organization
+	- NOTE: Even the UniGuild's abstract base organization can be forked,
+		      so competition is still possible
+
+
+Master Services:
+
+* People
+	- Retrieve People meta-database from Universal PplSPv
+	- Return registered PplSPv of People (lookup by hashed email address)
+
+* Master Guilds
+
+
+Services:
+
+* Global database resources (DbSPv)
+- Graph Database
+	- Per node Ppl2Spv & SPv2Ppl authorization
+	- Common attributes
+		- People owner
+		- Organization owner (optional)
+		- Permissions model
+		- Namespace
+		- Database
+		- Node class
+		- Created timestamp
+		- Modified timestamp
+
+* People (PplSPv)
+	- Authentication
+	- Authorization
+		- "People to Service Provider" Authorization (Ppl2SPv Auth)
+		- "Service Provider to People Data" Authorization (SPv2Ppl Auth)
+	- Personal information
+	- Global Preferences
+	- Per-Service Preferences
+	- Etc.
+
+* Organization (OrgSPv)
+	- Organizational hierarchy
+	- Members (People)
+	- Inherited permissions / data structures
+	- Addresses for organization-specific services
+
+* Idea Management (IdeaSPv)
+	- LASER ideas
+		- Idea Node-Relationship structure
+		- Node classes
+			- Key-Value Store (default node type)
+			- List
+			- Media
+				- Image
+				- Video
+				- Audio
+			- Color
+			- Hyperlink
+			- Document (DocSPv)
+			- Spreadsheet (SsSPv)
+			- Presentation (PtnSPv)
+		- Multiple perspectives
+			- Node-Ball
+			- JSON
+			- XML
+			- Outline
+			- Tree
+		- Meta data
+			- Association to Ppl / Org
+		- Fork / Merge
+		- Subscribe
+		- Related Ideas
+		- Implementation Links
+	- Most popular
+
+* Files
+	- v0: https://developers.google.com/drive/v2/reference/
+		- See: http://stackoverflow.com/questions/5383869/google-docs-api
+
+* Document Management (DocSPv)
+	- v0 (maybe): https://developers.google.com/apps-script/
+		- See: http://stackoverflow.com/questions/5383869/google-docs-api
+	- LASER word-processing documents
+		- Word processor
+		- Fork / Merge
+		- Subscribe
+		- Related Documents
+
+* Spreadsheet Management (SsSPv)
+	- v0: https://developers.google.com/google-apps/spreadsheets/
+		- See: http://stackoverflow.com/questions/5383869/google-docs-api
+	- LASER spreadsheets
+
+* Presentation Management (PtnSPv)
+	- v0 (maybe): https://developers.google.com/apps-script/
+		- See: http://stackoverflow.com/questions/5383869/google-docs-api
+	- LASER presentations
+
+* Guilds (GldSPv)
+	- Extends OrgSPv (or an abstract base organization within OrgSPv)
+	- Adds specialized organizational software specific to guild services
+	- A guild falls under a Master Guild, which falls under the UniGuild
+		- The UniGuild is a legitimate organization owned by the Cloud Initiative
+		- Master Guilds are legitimate suborganizations within the UniGuild
+		- Guilds are legitimate suborganizations within Master Guilds
+	- Guilds, Master Guilds, and the UniGuild are NOT labor unions
+		- Operating like a labor union (organizing strikes, etc) is strictly prohibited
+	- Guilds have names, but cannot contain the word "master".
+		- More precisely, cannot match: /[mM][ ]?[aA][ ]?[sS][ ]?[tT][ ]?[eE][ ]?[rR]/
+		- Yes, this means a guild cannot be named "Christmas Terms"
+		- This requirement about the word "master" is to avoid confusion with Master Guilds
+	- Master Guilds
+		- Media Master Guild
+			- User interface design
+			- Graphical design
+			- Illustration
+			- Video specialties
+			- Audio specialties
+		- Word Master Guild
+			- Naming
+			- Wordsmithing / Copy writing
+			- Reporting / Textual content generation
+			- Editing
+		- Software Master Guild
+			- User interface development
+			- Software engineering
+			- Software architecture
+		- Data Master Guild
+			- Database administration
+			- Data architecture
+			- Data engineering
+			- Data science (big data)
+		- Systems Master Guild
+			- Development operations (dev-ops)
+			- System administration
+			- Network administration
+		- Project Master Guild
+			- Project management
+		- Marketing Master Guild
+			- Marketing
+			- Advertising
+			- Analytics
+		- Vision Master Guild
+			- Vision
+			- Execution
+	- Character sheets
+		- (NOTE: Should probably base this more closely off of industrial psychology)
+		- Many values, from attributes through role levels, experience points, and more
+		  may be boosted by working on organizational projects -- this includes (in particular)
+		  open source development projects (although these projects must be performed by
+		  organizations that are registered with an Organization Service Provider).
+		- Challenges
+			- Challenges for novices / skilled guildmembers should be basic skill competencies
+			- Challenges for experts / masters can include designing / building / managing useful software
+				- This includes building challenges for novices / skilled guildmembers
+		- Limited personal information
+		- Attributes
+			- Potential attribute list:
+				- Detail Orientation
+				- Operational Speed
+				- Learning Speed
+				- Resistance to Change
+				- Attentiveness
+				- Hygiene / Grooming / Presentation
+				- Charisma
+				- Writing
+				- Reading
+				- Conversation
+				- Topic Focus
+				- Helpfulness (frequency with which individual attempts to answer questions / help)
+				- General Competency (rated via +1 system)
+				- Follow-Through
+				- Leadership
+				- Humility
+				- Cooperativeness
+				- Drive
+			- May be best organized into expandable categories that may be summed
+		- Education / Certifications / Credentials
+		- Awards / Special Noteworthies
+		- Roles
+			- Specialty name (ie Software Engineer)
+			- Level
+				- Names
+					- Novice (N)
+					- Skilled (S)
+					- Expert's Apprentice (EA)
+						- Requires apprenticeship to an expert
+						- Expected to be able to rely on expert's advice, knowledge, and/or help
+						- Failure of apprentice will reflect poorly on expert
+					- Expert (E)
+					- Master's Apprentice (MA)
+						- Requires apprenticeship to a master
+						- Expected to be able to rely on master's advice, knowledge, and/or help
+						- Failure of apprentice will reflect poorly on master
+					- Master (M)
+				- A number could also be included in level.  So, N3 would be better than N2.
+				- Various factors are reflected in level
+					- Challenge scores
+					- Overall experience points
+					- Specific role-based experience points
+					- Education / Certifications / Credentials
+						- Can only bump from Novice to Skilled
+					- Other guildmembers
+						- If a master/expert says you're skilled, then:
+							- If you're a novice, you instantly become skilled (after passing a single challege).
+							- If you're an expert, this hurts a tiny bit, but not much.
+							- If you're a master, it doesn't mean anything.  But if 3 masters agree, it hurts a little.
+						- If a master/expert says you're an expert, then:
+							- If you're currently novice, you'll immediately be bumped up to skilled.
+							- If you're currently novice or skilled, then you probably are an expert.
+							  But their respect isn't enough to just bump you up to expert by itself (but it will help).
+							- If you're currently a master, it doesn't mean anything.  But if 2 masters agree, it hurts a little.
+						- If a master says you're a master, then:
+							- If you're currently novice, you'll be immediately be bumped up to skilled.
+							- If you're currently novice or skilled, then you might be a master.
+							  But their respect isn't enough to just bump you up to master by itself (but it will help).
+						- If an expert says you're a master, then:
+							- If you're currently novice, you'll be immediately be bumped up to skilled.
+							- If you're currently novice or skilled, then you might be a master.
+							  But their respect isn't enough to just bump you up to master by itself (but it will help
+							  bump you up to expert).
+							- If you're currently an expert, it means nothing unless 3 experts and 1 master agree.
+							- (NOTE: It reflects poorly on experts/masters to recommend a level increase if other factors
+							  disagree with their assessment).
+					- A note on apprenticeships: If an expert or master takes you on as an apprentice, you immediately
+					  become an Expert's Apprentice or a Master's Apprentice
+		- Knowledge / Skills
+			- Knowledge / Skill name
+			- Challenge date (challenge = test / competency)
+			- Score
+		- Experience points
+		- Experience
+			- Organization
+			- Roles
+			- Dates
+			- Successes / Failures
+		- Estimated monetary value
+
+* Forums (FSPv)
+* Mock Ups
+* Architectural Decisions
+* Source Control / Repository (SrcSPv)
+* Project Management (PrjSPv)
+* Email
+* Domain Name Registration
+* VPS Creation
+* Monetary Payments
+	- Personal considerations
+	- Organizational considerations
+* Software Documentation
+	- Extends DocSPv
+
+
+Business Services:
+
+* Legal
+	- Incorporation
+	- Filings
+* Accounting
+* Human Resources
+* Administration
+* Executive Decision Making
+* Management
+* Banking
+* Lending
+* Real Estate
+
+
+Education:
+...
+
+
+Concepts:
+
+* High-level Network / Object-oriented concepts apply where possible
+	- An organization could be an extension of an abstract base organization
+	- A person's role in the organization could be an extension of an abstract base role
+* Forkability / Mergeability
+	- An abstract base organization could be forked and altered
+		- New organizations could extend the forked abstract base organization
+		- Changes to the forked abstract base organization could be merged into the original organization
+	- An abstract base organization could be extended as another abstract organization
+	- An abstract base class could be the base of people, organizations, and more data structures
+* Guilds
+	- If the Cloud Initiative is building an ecosystem, then guildmembers are its natives.
+	  Other people can still visit, but they're not really first-class citizens.  After all, it is
+	  the guilds that provide the workforce to implement the Cloud Initiative.
+
+

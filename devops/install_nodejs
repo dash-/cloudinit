@@ -1,0 +1,23 @@
+
+1. Word on the street is that "Trying to manage Node.JS and any of its ecosystem via RPM right now is an exercise in futility"
+   That having been said, we're doing a manual install.
+
+	$ sudo su
+
+2. Install openssl-devel (if necessary)
+
+	# yum install openssl-devel
+
+3. Download lastest stable node.js source (currently 0.8.17)
+   (The latest stable version is displayed on nodejs.org home page or download page)
+
+	# cd /usr/local/src
+	# wget http://nodejs.org/dist/v0.8.17/node-v0.8.17.tar.gz
+	# tar zxvf node-v0.8.17.tar.gz
+	# cd node-v0.8.17
+
+4. Make and install source
+
+	# ./configure
+	# make
+	# make install
